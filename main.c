@@ -5,20 +5,23 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a;
+	char c;
+	int num=0; 
 	
-	printf("정수 하나를 입력하시오 :");
-	scanf("%d",&a);
+	printf("input a string : ");
 	
-	if(a==0)
-		printf("절대값은 0입니다");
-	else if(a>0)
-		printf("절대값은 %d 입니다",a);
-	else
-		printf("절대값은 %d 입니다",-a);
-	
+	while((c=getchar())!='\n') // scanf를 사용하지 않아야  
+	{
+		if(c>='0'&&c<='9') 
+			num=num+1;
+	}
+			
+	printf("the number of digits is %i",num);
+
+
 
 	return 0;
 }
+
 
 
