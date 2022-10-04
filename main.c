@@ -5,32 +5,37 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a,b;
-	char c;
-	int result;
+	int answer=59;
+	int trial=0;
+	int a;
 	
-	printf("enter the calculation : ");
-	scanf("%d %c %d",&a,&c,&b);
-	
-	switch(c)
+	do
 	{
-		case'+':
-			result=a+b;
-			break;
-		case'-':
-			result=a-b;
-			break;
-		case'*':
-			result=a*b;
-			break;
-		default:
-			result=a/b;
-			break;
-	}
+		printf("guess a number :");
+		scanf("%d",&a);
 
-		
-	printf("=%i",result);
+		if(a>answer)
+			{
+				printf("high!\n");
+				trial=trial+1;
+			}
+		else if(a<answer)
+			{
+				printf("low!\n");
+				trial=trial+1;
+			}
+		else
+			{
+				printf("Congratulation!\n");
+				trial=trial+1;
+			}
+ 
+	}
 	
+	while(a!=answer);
+
+	printf("Number of trial=%i\n",trial);
+
 	return 0;
 }
 
